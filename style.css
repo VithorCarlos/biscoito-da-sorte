@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 67.5%;
+  font-family: 'Montserrat', sans-serif;
+  --color-primary: #34355B;
+  --color-secondary: #FF9500;
+}
+
+body {
+  font-size: 1.6rem;
+  background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 2rem;
+}
+
+h1, h2 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+p {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.box {
+  padding: 4.8rem 8.5rem;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 42.8rem;
+  border-radius: 5px;
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+}
+
+#open-cookie {
+  position: relative;
+  width: 20rem;
+  height: 18rem;
+}
+
+#open-cookie img {
+  position: absolute;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 20rem;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition: all ease-out .3s;
+}
+
+
+#open-cookie img:hover {
+  transform: scale(1.03);
+  animation: tremer .2s infinite;
+}
+
+.box-lucky {
+  padding: 1rem;
+  background: #E4EDF1;
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+  margin-bottom: 4rem;
+}
+
+.box-lucky p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.4rem;
+}
+
+
+.screen2 button {
+  background: var(--color-secondary);
+  border: none;
+  cursor: pointer;
+  padding: 1.6rem;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 6rem;
+}
+
+.hide {
+  display: none;
+}
+
+.wrapper-lucky {
+  width: 100%;
+}
+
+
+.box-lucky {
+  animation: move 2s;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    margin-bottom: -10rem;
+
+
+  }
+
+  100% {
+    opacity: 1;
+
+  }
+
+}
+
+@keyframes tremer {
+  0% {padding: 0}
+  25% {padding-top: .2rem;}
+  50% {padding-bottom: -.2rem;}
+  75% {padding-right: .2rem;}
+  100% {padding: 0;}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
